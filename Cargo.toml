@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/b2-chat-backend"
+]
+resolver = "2"

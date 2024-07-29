@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "b2-chat-backend": {
+      "candid": "src/b2-chat-backend/b2-chat-backend.did",
+      "package": "b2-chat-backend",
+      "type": "rust"
+    },
+    "b2-chat-frontend": {
+      "dependencies": [
+        "b2-chat-backend"
+      ],
+      "source": [
+        "src/b2-chat-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "b2-chat-frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
